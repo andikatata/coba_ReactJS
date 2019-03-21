@@ -1,0 +1,96 @@
+icrosoft Windows [Version 6.3.9600]
+(c) 2013 Microsoft Corporation. All rights reserved.
+
+D:\development\front-end\Ebri>git branch
+* master
+
+D:\development\front-end\Ebri>git branch
+  Developer
+* feature-login
+  master
+
+D:\development\front-end\Ebri>git status
+On branch feature-login
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        percil
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\development\front-end\Ebri>git add .
+
+D:\development\front-end\Ebri>git commit -m "add feature-login #sdfsdf"
+[feature-login 3eed73c] add feature-login #sdfsdf
+ 1 file changed, 1 insertion(+)
+ create mode 100644 percil
+
+D:\development\front-end\Ebri>git checkout Developer
+Switched to branch 'Developer'
+Your branch is up to date with 'origin/Developer'.
+
+D:\development\front-end\Ebri>git merge feature-login
+Updating 88d7272..3eed73c
+Fast-forward
+ percil | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 percil
+
+D:\development\front-end\Ebri>git merge feature-login --no-ff
+Already up to date.
+
+D:\development\front-end\Ebri>git pull upstream Developer
+fatal: 'upstream' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+D:\development\front-end\Ebri>git push origin  Developer
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 313 bytes | 104.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+remote:
+remote: To create a merge request for Developer, visit:
+remote:   https://gitlab.playcourt.id/moklet-tata/Ebri/merge_requests/new?merge_request%5Bsource_branch%5D=Developer
+remote:
+To ssh://gitlab.playcourt.id:31022/moklet-tata/Ebri.git
+   88d7272..3eed73c  Developer -> Developer
+
+D:\development\front-end\Ebri>git remote
+origin
+
+D:\development\front-end\Ebri>git remote add upstream
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+
+D:\development\front-end\Ebri>git remote add upstream ssh://git@gitlab.playcourt.id:31022/moklet-ebri/Ebri.git
+
+D:\development\front-end\Ebri>git remote -v
+origin  ssh://git@gitlab.playcourt.id:31022/moklet-tata/Ebri.git (fetch)
+origin  ssh://git@gitlab.playcourt.id:31022/moklet-tata/Ebri.git (push)
+upstream        ssh://git@gitlab.playcourt.id:31022/moklet-ebri/Ebri.git (fetch)
+upstream        ssh://git@gitlab.playcourt.id:31022/moklet-ebri/Ebri.git (push)
+
+D:\development\front-end\Ebri>git pull upstream Developer
+From ssh://gitlab.playcourt.id:31022/moklet-ebri/Ebri
+ * branch            Developer  -> FETCH_HEAD
+ * [new branch]      Developer  -> upstream/Developer
+Already up to date.
+
+D:\development\front-end\Ebri>git push origin  Developer
+Everything up-to-date
+
+D:\development\front-end\Ebri>

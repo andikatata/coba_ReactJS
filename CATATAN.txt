@@ -1,0 +1,6 @@
+CATATAN
+
+1.npm run test
+2.npm run test -- --coverage
+3.npm install axios
+4.npm install axios --save
